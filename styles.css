@@ -1,4 +1,9 @@
-.container #myVideo {
-  width: auto;
-  height: 100%;
+body {
+  background: #4b0515; 
+}
+
+.smallVideo {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
 }
