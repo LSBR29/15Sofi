@@ -5,6 +5,7 @@ body {
 }
 
 .smallVideo {
+  max-width: 400px;
   margin: auto;
   margin-top: 15px;
   display: flex;
