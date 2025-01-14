@@ -1,10 +1,52 @@
 body {
-  background: #4b0515; 
+  background: #4b0515;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .smallVideo {
   max-width: 400px;
   margin: auto;
-  margin-top: 50px;
   display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.star {
+  position: absolute;
+  top: -20px;
+  color: #d7ca8d;
+  animation: animate 5s linear forwards;
+}
+
+.star::before {
+  content: "\f005";
+  font-family: FontAwesome;
+  text-shadow: 0 0 5px #d7ca8d, 0 0 20px #d7ca8d, 0 0 50px #d7ca8d;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .star {
+    font-size: 8px;
+  }
 }
